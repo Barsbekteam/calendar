@@ -1,16 +1,20 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
+import Loader from "../Loader";
 
-const June = () => {
+const Year = () => {
     const [fetchData, setFetchData] = useState({});
+    const [loader, setLoader] = useState(false)
     const [dateCount, setDateCount] = useState([])
     const getData = async () => {
         try {
+            setLoader(true)
             const response = await axios.get('https://dpg.gg/test/calendar.json');
             const{data} = await response
             const dataArray = Object.entries(data).map(([date, count]) => ({ date, count }))
             setDateCount(dataArray)
             setFetchData(data);
+            setLoader(false)
         } catch (error) {
             console.error(error);
         }
@@ -49,6 +53,7 @@ const June = () => {
 
     return (
         <div className="data" >
+            {loader && <Loader/>}
             <button style={{
                 margin: '6px 1px 1px 1px',
             }}></button>
@@ -57,4 +62,4 @@ const June = () => {
     );
 };
 
-export default June;
+export default Year;

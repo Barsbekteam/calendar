@@ -1,4 +1,4 @@
-import June from "./components/June";
+import Year from "./components/Year";
 
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
                 <h1>Ср</h1>
                 <h1>Пт</h1>
             </div>
-            <June/>
+            <Year/>
         </div>
         <div className="small">
             Меньше
