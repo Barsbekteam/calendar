@@ -35,7 +35,7 @@ function App() {
             <button style={{background: '#7FA8C9'}}></button>
             <button style={{background: '#527BA0'}}></button>
             <button style={{background: '#254E77'}}></button>
-            <span style={{marginLeft: '5px'}}>Больше</span>
+            <span style={{marginLeft: '4px'}}>Больше</span>
         </div>
     </div>
   );
