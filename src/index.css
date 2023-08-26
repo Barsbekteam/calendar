@@ -21,6 +21,7 @@ button{
   padding: 7px;
   transition: .6s;
   margin: 0 2px;
+  background: transparent;
 }
 button:hover{
   cursor: pointer;
